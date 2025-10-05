@@ -26,7 +26,7 @@ export default function GetStartedPage() {
               <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500/30 transition-colors">
                 <Users className="h-8 w-8 text-blue-400" />
               </div>
-              <h3 className="text-2xl font-semibold text-white mb-2">I'm a Doctor</h3>
+              <h3 className="text-2xl font-semibold text-white mb-2">I&apos;m a Doctor</h3>
               <p className="text-gray-300 mb-4">
                 Access patient records, manage appointments, and use AI-powered insights
               </p>
@@ -46,7 +46,7 @@ export default function GetStartedPage() {
               <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-500/30 transition-colors">
                 <Shield className="h-8 w-8 text-purple-400" />
               </div>
-              <h3 className="text-2xl font-semibold text-white mb-2">I'm a Patient</h3>
+              <h3 className="text-2xl font-semibold text-white mb-2">I&apos;m a Patient</h3>
               <p className="text-gray-300 mb-4">
                 View your medical records, track health progress, and communicate with doctors
               </p>
@@ -60,7 +60,7 @@ export default function GetStartedPage() {
 
         <div className="text-center">
           <p className="text-gray-400">
-            Don't have an account?{' '}
+            Don&apos;t have an account?{' '}
             <Link href="/signup" className="text-blue-400 hover:text-blue-300 transition-colors">
               Sign up here
             </Link>
