@@ -1,7 +1,8 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+
+import { Shield } from 'lucide-react';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -25,8 +26,8 @@ function Navbar() {
             <div className="flex items-center space-x-3">
               {/* Logo */}
               <div className="flex-shrink-0">
-                <div className="w-8 h-8 rounded-lg flex items-center justify-center">
-                  <Image src="/caresafe.png" alt="CareSafe Logo" width={32} height={32} className="w-8 h-8" />
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-blue-600">
+                  <Shield className="h-5 w-5 text-white" />
                 </div>
               </div>
               {/* Brand Text */}
@@ -76,8 +77,8 @@ function Navbar() {
           <div className="flex items-center space-x-3">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <div className="w-8 h-8 rounded-lg flex items-center justify-center">
-                <Image src="/caresafe.png" alt="CareSafe Logo" width={32} height={32} className="w-8 h-8" />
+              <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-blue-600">
+                <Shield className="h-5 w-5 text-white" />
               </div>
             </div>
             {/* Brand Text */}

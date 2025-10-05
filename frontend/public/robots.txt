@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://caresafe.vercel.app/sitemap.xml
