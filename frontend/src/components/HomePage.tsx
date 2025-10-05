@@ -1,7 +1,7 @@
 
 'use client';
 
-import { ArrowRight, Shield, Cloud, Brain, Lock, FileText, UserCheck, Sparkles, CheckCircle, Users, Clock, TrendingUp } from 'lucide-react';
+import { ArrowRight, Shield, Cloud, Brain, Lock, FileText, UserCheck, Sparkles, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 import Footer from './Footer';
 
@@ -38,13 +38,6 @@ export default function HomePage() {
       title: "Privacy First",
       description: "Advanced encryption and authentication to protect sensitive health information"
     }
-  ];
-
-  const stats = [
-    { icon: <Users className="h-5 w-5" />, value: "10K+", label: "Active Users" },
-    { icon: <FileText className="h-5 w-5" />, value: "50K+", label: "Records Managed" },
-    { icon: <Clock className="h-5 w-5" />, value: "24/7", label: "Availability" },
-    { icon: <TrendingUp className="h-5 w-5" />, value: "99.9%", label: "Uptime" }
   ];
 
   const benefits = [
