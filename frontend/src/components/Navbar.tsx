@@ -19,7 +19,7 @@ function Navbar() {
   // Prevent hydration mismatch by not rendering interactive elements until mounted
   if (!isMounted) {
     return (
-      <nav className="bg-black/20 backdrop-blur-md border-b border-white/10 shadow-lg">
+      <nav className="">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo and Brand */}
@@ -70,7 +70,7 @@ function Navbar() {
   }
 
   return (
-    <nav className="bg-black/20 backdrop-blur-md border-b border-white/10 shadow-lg">
+    <nav className="">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-16">
         <div className="flex justify-between items-center h-16">
           {/* Logo and Brand */}
