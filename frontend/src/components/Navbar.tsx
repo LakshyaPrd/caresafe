@@ -1,7 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-
 import { Shield } from 'lucide-react';
 
 function Navbar() {
@@ -19,14 +18,14 @@ function Navbar() {
   // Prevent hydration mismatch by not rendering interactive elements until mounted
   if (!isMounted) {
     return (
-      <nav className="">
+      <nav className="bg-black/20 backdrop-blur-md border-b border-white/10 shadow-lg">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo and Brand */}
             <div className="flex items-center space-x-3">
               {/* Logo */}
               <div className="flex-shrink-0">
-                <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-blue-600">
+                <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
                   <Shield className="h-5 w-5 text-white" />
                 </div>
               </div>
@@ -70,26 +69,26 @@ function Navbar() {
   }
 
   return (
-    <nav className="">
+    <nav className="bg-black/20 backdrop-blur-md border-b border-white/10 shadow-lg">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-16">
         <div className="flex justify-between items-center h-16">
           {/* Logo and Brand */}
           <div className="flex items-center space-x-3">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-blue-600">
+              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
                 <Shield className="h-5 w-5 text-white" />
               </div>
             </div>
             {/* Brand Text */}
             <div className="hidden sm:block">
-              <Link href="/" className="text-2xl font-bold text-white hover:text-blue-600 transition-colors">
+              <Link href="/" className="text-2xl font-bold text-white hover:text-blue-400 transition-colors">
                 CareSafe
               </Link>
             </div>
             {/* Mobile Brand Text */}
             <div className="sm:hidden">
-              <Link href="/" className="text-xl font-bold text-white hover:text-blue-600 transition-colors">
+              <Link href="/" className="text-xl font-bold text-white hover:text-blue-400 transition-colors">
                 CareSafe
               </Link>
             </div>
@@ -112,7 +111,7 @@ function Navbar() {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none "
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent transition-colors"
               aria-expanded={isMenuOpen}
               aria-label="Toggle navigation menu"
             >

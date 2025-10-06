@@ -1,53 +1,12 @@
-
 'use client';
-
-import { ArrowRight, Shield, Cloud, Brain, Lock, FileText, UserCheck, Sparkles, CheckCircle } from 'lucide-react';
+import { Box, Search, Settings, } from "lucide-react";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
+import { ArrowRight, Shield, Cloud, Brain, Lock, FileText, UserCheck, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 import Footer from './Footer';
 
 
 export default function HomePage() {
-  const features = [
-    {
-      icon: <Shield className="h-6 w-6" />,
-      title: "Secure Storage",
-      description: "End-to-end encrypted cloud storage for all medical records with HIPAA compliance"
-    },
-    {
-      icon: <Brain className="h-6 w-6" />,
-      title: "AI Assistant",
-      description: "RAG-based intelligent assistant helps doctors analyze patient data and treatment patterns"
-    },
-    {
-      icon: <FileText className="h-6 w-6" />,
-      title: "Digital Prescriptions",
-      description: "Upload and manage prescriptions digitally with automatic OCR and data extraction"
-    },
-    {
-      icon: <UserCheck className="h-6 w-6" />,
-      title: "Patient Portal",
-      description: "Personalized dashboard for patients to track their health records and history"
-    },
-    {
-      icon: <Cloud className="h-6 w-6" />,
-      title: "Cloud Access",
-      description: "Access medical records anytime, anywhere with seamless cloud synchronization"
-    },
-    {
-      icon: <Lock className="h-6 w-6" />,
-      title: "Privacy First",
-      description: "Advanced encryption and authentication to protect sensitive health information"
-    }
-  ];
-
-  const benefits = [
-    "Instant access to complete medical history",
-    "Seamless doctor-patient communication",
-    "AI-powered health insights and analytics",
-    "Automated prescription management",
-    "Secure cloud backup and recovery",
-    "Role-based access control"
-  ];
 
   return (
     <div className="min-h-screen relative">
@@ -138,7 +97,7 @@ export default function HomePage() {
 
                 {/* Floating Elements */}
                 <div className="absolute -right-4 -top-4 h-20 w-20 rounded-full bg-yellow-400 opacity-80 blur-xl"></div>
-                <div className="absolute -bottom-4 -left-4 h-24 w-24 rounded-full bg-pink-400 opacity-80 blur-xl"></div>
+                <div className="absolute -bottom-4 -left-4 h-24 w-24 rounded-full bg-pink-400 opacity-60 blur-xl"></div>
               </div>
             </div>
           </div>
@@ -159,106 +118,42 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {features.map((feature, index) => (
-              <div 
-                key={index}
-                className="group relative rounded-2xl border border-white/20 bg-white/10 backdrop-blur-sm p-8 shadow-sm transition-all hover:shadow-xl hover:border-blue-400/50 hover:bg-white/20"
-              >
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-blue-500/20 text-blue-400 transition-colors group-hover:bg-blue-600 group-hover:text-white border border-blue-400/30">
-                  {feature.icon}
-                </div>
-                <h3 className="mb-2 text-xl font-semibold text-white">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid gap-12 lg:grid-cols-2 items-center">
-            {/* Left: Visual */}
-            <div className="order-2 lg:order-1">
-              <div className="relative">
-                <div className="rounded-2xl bg-gradient-to-br from-blue-600 to-purple-600 p-8 text-white">
-                  <h3 className="text-2xl font-bold mb-6">Trusted by Healthcare Professionals</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-start space-x-3 bg-white/10 rounded-lg p-4 backdrop-blur">
-                      <CheckCircle className="h-6 w-6 flex-shrink-0 mt-0.5" />
-                      <div>
-                        <p className="font-medium">HIPAA Compliant</p>
-                        <p className="text-sm text-blue-100">Full compliance with healthcare regulations</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-3 bg-white/10 rounded-lg p-4 backdrop-blur">
-                      <CheckCircle className="h-6 w-6 flex-shrink-0 mt-0.5" />
-                      <div>
-                        <p className="font-medium">Bank-Level Security</p>
-                        <p className="text-sm text-blue-100">256-bit encryption for all data</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-3 bg-white/10 rounded-lg p-4 backdrop-blur">
-                      <CheckCircle className="h-6 w-6 flex-shrink-0 mt-0.5" />
-                      <div>
-                        <p className="font-medium">Regular Backups</p>
-                        <p className="text-sm text-blue-100">Automated cloud backup every hour</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right: Content */}
-            <div className="order-1 lg:order-2">
-              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-6">
-                Why Choose <span className="text-blue-400">CareSafe</span>?
-              </h2>
-              <p className="text-lg text-gray-300 mb-8">
-                Built with cutting-edge technology and designed for the modern healthcare ecosystem, 
-                CareSafe provides unmatched convenience and security.
-              </p>
-              
-              <div className="space-y-3">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="px-4 py-16 sm:px-6 lg:px-8 ">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">
-            Ready to Transform Your Healthcare Experience?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Join thousands of patients and doctors using CareSafe for secure, intelligent health record management.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/signin"
-              className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-3 text-base font-semibold text-blue-600 transition-all hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600"
-            >
-              Start Free Today
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-            
-          </div>
+          <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
+            <GridItem
+              area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
+              icon={<Box className="h-4 w-4 text-white" />}
+              title="Secure Medical Records"
+              description="End-to-end encrypted storage for all your medical data with HIPAA compliance."
+            />
+      
+            <GridItem
+              area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
+              icon={<Settings className="h-4 w-4 text-white" />}
+              title="AI-Powered Insights"
+              description="Get intelligent health analytics and personalized recommendations from our advanced AI."
+            />
+      
+            <GridItem
+              area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]"
+              icon={<Lock className="h-4 w-4 text-white" />}
+              title="Privacy First Design"
+              description="Your health data is protected with bank-level security and zero-knowledge architecture."
+            />
+      
+            <GridItem
+              area="md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
+              icon={<Sparkles className="h-4 w-4 text-white" />}
+              title="Smart Automation"
+              description="Automated prescription management and appointment scheduling powered by AI."
+            />
+      
+            <GridItem
+              area="md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]"
+              icon={<Search className="h-4 w-4 text-white" />}
+              title="Easy Search & Access"
+              description="Find any medical record instantly with our powerful search and filtering system."
+            />
+          </ul>
         </div>
       </section>
 
@@ -266,4 +161,44 @@ export default function HomePage() {
       
     </div>
   );
+
 }
+
+// Move these outside the HomePage component
+interface GridItemProps {
+  area: string;
+  icon: React.ReactNode;
+  title: string;
+  description: React.ReactNode;
+}
+ 
+const GridItem = ({ area, icon, title, description }: GridItemProps) => {
+  return (
+    <li className={`min-h-[14rem] list-none ${area}`}>
+      <div className="relative h-full rounded-2xl border p-2 md:rounded-3xl md:p-3">
+        <GlowingEffect
+          spread={40}
+          glow={true}
+          disabled={false}
+          proximity={64}
+          inactiveZone={0.01}
+        />
+        <div className="border-0.75 relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl p-6 md:p-6 dark:shadow-[0px_0px_27px_0px_#2D2D2D]">
+          <div className="relative flex flex-1 flex-col justify-between gap-3">
+            <div className="w-fit rounded-lg border border-gray-400 bg-white/10 backdrop-blur-sm p-2">
+              {icon}
+            </div>
+            <div className="space-y-3">
+              <h3 className="-tracking-4 pt-0.5 font-sans text-xl/[1.375rem] font-semibold text-balance text-white md:text-2xl/[1.875rem]">
+                {title}
+              </h3>
+              <h2 className="font-sans text-sm/[1.125rem] text-gray-300 md:text-base/[1.375rem] [&_b]:md:font-semibold [&_strong]:md:font-semibold">
+                {description}
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  );
+};
